@@ -88,7 +88,7 @@ LIFEGUARD_LOG_LEVEL	    Sets the core log level		    INFO`
                             </div>
                             <div>
                                 <h5 className="text-black/90 font-semibold text-md">Plugins Based</h5>
-                                <p className="text-sm text-black/60">Like other frameworks, Lifeguard was built with mechanisms that facilitate the creation of plugins, separating what is essential from what is optional. Example: The core must know when or not to notify, but we don't need to load the MS Teams notification routines if we are going to use Google Chat.</p>
+                                <p className="text-sm text-black/60">Like other frameworks, Lifeguard was built with mechanisms that facilitate the creation of plugins, separating what is essential from what is optional. Example: The core must know when or not to notify, but we dont need to load the MS Teams notification routines if we are going to use Google Chat.</p>
                             </div>
                         </div>
                         <div className="backdrop-blur-sm bg-white/10 w-full border rounded-md xl:text-lg border-white/40 p-4 flex gap-4 items-center border-box col-span-1 cursor-pointer" onClick={() => setCode(validationCode)}>
@@ -100,7 +100,7 @@ LIFEGUARD_LOG_LEVEL	    Sets the core log level		    INFO`
                             </div>
                             <div>
                                 <h5 className="text-black/90 font-semibold text-md">Proactive Validations</h5>
-                                <p className="text-sm text-black/60">Most monitoring systems work reactively, like the Grafana Alertmanager solution, that is, based on things (in many cases, errors) that have already happened that alerts are triggered. Lifeguard's focus is on making it easy to create proactive validations that can look for errors and send easily understandable alerts.</p>
+                                <p className="text-sm text-black/60">Most monitoring systems work reactively, like the Grafana Alertmanager solution, that is, based on things (in many cases, errors) that have already happened that alerts are triggered. Lifeguards focus is on making it easy to create proactive validations that can look for errors and send easily understandable alerts.</p>
                             </div>
                         </div>
                         <div className="backdrop-blur-sm bg-white/10 w-full border rounded-md xl:text-lg border-white/40 p-4 flex gap-4 items-center border-box col-span-1 cursor-pointer" onClick={() => setCode(deployCode)}>

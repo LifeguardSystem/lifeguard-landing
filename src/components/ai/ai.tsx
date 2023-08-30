@@ -19,7 +19,7 @@ export default function OpenAi() {
                             <br />
                             1. gallery-7474d49d68-x120n:
                             <br />
-                            The root cause of this error is that the file /file/not/exists.log' does not exist. The tail command is trying to read the file, butit
+                            The root cause of this error is that the file /file/not/exists.log does not exist. The tail command is trying to read the file, butit
                             . cannot find it because it does not exist.
                         </p>
                     </div>
