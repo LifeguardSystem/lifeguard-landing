@@ -1,6 +1,8 @@
 
 'use client'
 
+import CopyableField from "@/components/molecules/copyable-field"
+
 export default function HowTo() {
     const code = `import lifeguard_mongodb
 
@@ -26,27 +28,12 @@ def setup(lifeguard_context):
             <div className="grid grid-cols-2 gap-10">
                 <div className="col-span-1">
                     <h5 className="text-black/90 font-semibold text-xl">Starting a project</h5>
-                    <p className="text-sm text-black/60 mt-2">To start a project, you need to install the Lifeguard package using pip:</p>
-                    <span className="inline-flex items-center backdrop-blur-sm rounded-lg bg-gray-10 px-5 py-2 text-sm font-medium font-mono text-gray-500 ring-1 ring-inset ring-white/70 bg-white/20 box-border my-5">
-                        pip install lifeguard
-                        <span className="text-xs bg-white/40 px-2 py-2 ml-4 backdrop-blur-sm rounded-md cursor-pointer box-border" onClick={() => navigator.clipboard.writeText('pip install lifeguard')}>
-                            copy
-                        </span>
-                    </span>
-                    <p className="text-sm text-black/60">Create a new directory and create a main settings file used for Lifeguard:</p>
-                    <span className="inline-flex items-center backdrop-blur-sm rounded-lg bg-gray-10 px-5 py-2 text-sm font-medium font-mono text-gray-500 ring-1 ring-inset ring-white/70 bg-white/20 box-border my-5">
-                        mkdir myproject && cd myproject
-                        <span className="text-xs bg-white/40 px-2 py-2 ml-4 backdrop-blur-sm rounded-md cursor-pointer box-border" onClick={() => navigator.clipboard.writeText('mkdir myproject && cd myproject')}>
-                            copy
-                        </span>
-                    </span>
-                    <p className="text-sm text-black/60">The -g parameter will create a new file called lifeguard_settings.py with the initial structure. The example in the right side is a example.</p>
-                    <span className="inline-flex items-center backdrop-blur-sm rounded-lg bg-gray-10 px-5 py-2 text-sm font-medium font-mono text-gray-500 ring-1 ring-inset ring-white/70 bg-white/20 box-border my-5">
-                        lifeguard -g
-                        <span className="text-xs bg-white/40 px-2 py-2 ml-4 backdrop-blur-sm rounded-md cursor-pointer box-border" onClick={() => navigator.clipboard.writeText('lifeguard -g')}>
-                            copy
-                        </span>
-                    </span>
+                    <p className="text-sm text-black/60 my-4">To start a project, you need to install the Lifeguard package using pip:</p>
+                    <CopyableField content="pip install lifeguard" />
+                    <p className="text-sm text-black/60 my-4">Create a new directory and create a main settings file used for Lifeguard:</p>
+                    <CopyableField content="mkdir myproject && cd myproject" />
+                    <p className="text-sm text-black/60 my-4">The -g parameter will create a new file called lifeguard_settings.py with the initial structure. The example in the right side is a example.</p>
+                    <CopyableField content="lifeguard init -g" />
                 </div>
 
 

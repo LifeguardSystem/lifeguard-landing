@@ -1,5 +1,7 @@
 'use client'
 
+import CopyableField from "@/components/molecules/copyable-field"
+
 
 
 
@@ -35,12 +37,7 @@ def setup(lifeguard_context):
                     <h2 className="text-md md:text-lg text-gray-900">Quickly create scripts to perform validations to monitor systems, applications or infrastructure. Easily take action when behavior changes or when a problem is detected!</h2>
 
                     <div className="flex gap-4 justify-center">
-                        <span className="hidden md:inline-flex items-center backdrop-blur-sm rounded-lg bg-gray-10 px-5 py-2 text-sm font-medium font-mono text-gray-500 ring-1 ring-inset ring-white/70 bg-white/20 box-border">
-                            pip install lifeguard
-                            <span className="text-xs bg-white/40 px-2 py-2 ml-4 backdrop-blur-sm rounded-md cursor-pointer box-border" onClick={() => navigator.clipboard.writeText('pip install lifeguard')}>
-                                copy
-                            </span>
-                        </span>
+                        <CopyableField content="pip install lifeguard" />
                     </div>
                 </div>
 
