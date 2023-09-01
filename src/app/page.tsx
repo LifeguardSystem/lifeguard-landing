@@ -1,11 +1,11 @@
-import About from '@/components/about/about'
-import OpenAi from '@/components/ai/ai'
-import Banner from '@/components/banner/banner'
-import Footer from '@/components/footer/footer'
-import Header from '@/components/header/header'
-import Hero from '@/components/hero/hero'
-import HowTo from '@/components/how-to/how-to'
-import Plugins from '@/components/plugins/plugins'
+import About from '@/components/organisms/about/about'
+import OpenAi from '@/components/organisms/ai/ai'
+import Banner from '@/components/organisms/banner/banner'
+import Footer from '@/components/organisms/footer/footer'
+import Header from '@/components/organisms/header/header'
+import Hero from '@/components/organisms/hero/hero'
+import HowTo from '@/components/organisms/how-to/how-to'
+import Plugins from '@/components/organisms/plugins/plugins'
 
 export default function Home() {
   return (
