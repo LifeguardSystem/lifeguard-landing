@@ -1,28 +1,10 @@
 
-'use client'
 
+import CodeSnippet from "@/components/molecules/code-snippet"
 import CopyableField from "@/components/molecules/copyable-field"
+import { authExample } from "@/examples"
 
 export default function HowTo() {
-    const code = `import lifeguard_mongodb
-
-from lifeguard.settings import SettingsManager
-from lifeguard.auth import BASIC_AUTH_METHOD
-
-PLUGINS = [lifeguard_mongodb]
-
-def setup(lifeguard_context):
-    lifeguard_context.auth_method = BASIC_AUTH_METHOD
-    lifeguard_context.users = [
-            {
-                "username": "user", 
-                "password": "pass"
-            }
-    ]`
-
-    const lines = code.split('\n')
-
-
     return (
         <div className="container mx-auto py-10 pt-20 relative">
             <div className="grid grid-cols-2 gap-10">
@@ -35,25 +17,7 @@ def setup(lifeguard_context):
                     <p className="text-sm text-black/60 my-4">The -g parameter will create a new file called lifeguard_settings.py with the initial structure. The example in the right side is a example.</p>
                     <CopyableField content="lifeguard init -g" />
                 </div>
-
-
-                <div className="col-span-1 relative backdrop-blur-sm bg-white/30 w-full border rounded-2xl xl:text-lg border-white/40">
-                    <pre className="text-gray-800 text-sm flex items-baseline  min-h-full h-full  leading-8">
-                        <div className="px-5 text-gray-400 hidden md:block">
-                            {lines.map((line, index) => {
-                                return (
-                                    <><code className="block">{index}</code></>
-                                )
-                            })}
-                        </div>
-                        <div className="border-l border-white/80 h-full pl-5 py-5">
-                            {lines.map((line) => {
-                                return line === "" ? <><code className="block">{" "}</code></> : <><code className="block">{line}</code></>
-
-                            })}
-                        </div>
-                    </pre>
-                </div>
+                <CodeSnippet code={authExample} />
             </div>
             <div
                 className="absolute -bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl right-0 "

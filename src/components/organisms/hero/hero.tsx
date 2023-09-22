@@ -1,67 +1,26 @@
 'use client'
 
+import CodeSnippet from "@/components/molecules/code-snippet"
 import CopyableField from "@/components/molecules/copyable-field"
-
-
+import Badge from "@/components/atoms/badge"
+import { authExample } from "@/examples"
 
 
 export default function Hero() {
-
-    const code = `import lifeguard_mongodb
-
-from lifeguard.settings import SettingsManager
-from lifeguard.auth import BASIC_AUTH_METHOD
-
-PLUGINS = [lifeguard_mongodb]
-
-def setup(lifeguard_context):
-    lifeguard_context.auth_method = BASIC_AUTH_METHOD
-    lifeguard_context.users = [
-            {
-                "username": "user", 
-                "password": "pass"
-            }
-    ]`
-
-    const lines = code.split('\n')
 
     return (
         <section className="container mx-auto relative flex items-center">
             <div className="grid grid-cols-2 py-24 gap-20">
                 <div className="col-span-1 flex flex-col items-start gap-8">
-                    <span className="inline-flex items-center rounded-full bg-gray-10 px-4 py-1 text-sm font-medium text-gray-600 ring-1 ring-inset ring-gray-600/10">
-                        We announce version 1.4.1 🎉
-                    </span>
-                    <h1 className="text-4xl md:text-7xl font-bold text-gray-900 ">An Opined Monitoring And Self Healing System
-                    </h1>
+                    <Badge text="We announce a new version! 🎉" />
+                    <h1 className="text-4xl md:text-7xl font-bold text-gray-900 ">An Opined Monitoring And Self Healing System</h1>
                     <h2 className="text-md md:text-lg text-gray-900">Quickly create scripts to perform validations to monitor systems, applications or infrastructure. Easily take action when behavior changes or when a problem is detected!</h2>
-
                     <div className="flex gap-4 justify-center">
                         <CopyableField content="pip install lifeguard" />
                     </div>
                 </div>
-
-                <div className="col-span-1 relative backdrop-blur-sm bg-white/30 w-full border rounded-2xl xl:text-lg border-white/40">
-                    <pre className="text-gray-800 text-sm flex items-baseline  min-h-full h-full  leading-8">
-                        <div className="px-5 text-gray-400 hidden md:block">
-                            {lines.map((line, index) => {
-                                return (
-                                    <><code className="block">{index}</code></>
-                                )
-                            })}
-                        </div>
-                        <div className="border-l border-white/80 h-full pl-5 py-5">
-                            {lines.map((line) => {
-                                return line === "" ? <><code className="block">{" "}</code></> : <><code className="block">{line}</code></>
-
-                            })}
-                        </div>
-                    </pre>
-                </div>
-
+                <CodeSnippet code={authExample} />
             </div>
-
-
 
             <div
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
